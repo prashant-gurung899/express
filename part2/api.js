@@ -38,6 +38,7 @@ let Enquiries = mongoose.model('Enquiries',enquiriesSchema,'enquiries')
 router.post('/contact',(req,res)=>
 {
     let enquiry1= new Enquiries(req.body)
+    //save form data
     enquiry1.save((err,enquiry)=>
     {
         if(err){log(err)}
